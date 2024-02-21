@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+  text-align: center;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 7px 7px gold;
+}
+li {
+  float: left;
+  margin-right: 30px;
+}
+li a {
+  display: block;
+  color: gold;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+li a:hover {
+  color: rgb(189, 237, 100);
+}
+
+li:hover {
+  background-color: rgb(215, 146, 26);
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 700px;
+  display: inline;
+}

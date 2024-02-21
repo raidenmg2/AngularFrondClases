@@ -1,0 +1,73 @@
+
+<section>
+    <h2>{{titulo}}
+        <br>
+        <br>
+        La Edad es {{edad}}
+        <br>    
+    </h2>
+@if (ocultar) {
+<section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corrupti voluptatum 
+      tenetur odit, ex veritatis tempora accusantium numquam? Molestiae fugiat incidunt mollitia
+       dolorum, atque aut recusandae. Aut provident minima laborum. Lorem ipsum dolor sit amet, 
+       consectetur adipisicing elit. Beatae corrupti voluptatum tenetur odit, ex veritatis tempora
+        accusantium numquam? Molestiae fugiat incidunt mollitia dolorum, atque aut recusandae. 
+        Aut provident minima laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Beatae corrupti voluptatum  tenetur odit, ex veritatis tempora accusantium numquam? Molestiae fugiat incidunt mollitia
+         dolorum, atque aut recusandae. Aut provident minima laborum. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Beatae corrupti voluptatum  tenetur odit, ex veritatis 
+          tempora accusantium numquam? Molestiae fugiat incidunt mollitia dolorum, atque aut recusandae.
+           Aut provident minima laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corrupti voluptatum 
+          tenetur odit, ex veritatis tempora accusantium numquam? Molestiae fugiat incidunt mollitia
+           dolorum, atque aut recusandae. Aut provident minima laborum. Lorem ipsum dolor sit amet, 
+           consectetur adipisicing elit. Beatae corrupti voluptatum tenetur odit, ex veritatis tempora
+            accusantium numquam? Molestiae fugiat incidunt mollitia dolorum, atque aut recusandae. Aut provident minima laborum. 
+    </p>
+</section>
+
+}@else {
+
+    <h4>No muestra el parrafo</h4>
+
+}
+
+<app-tabla 
+[Usuarios]="users"
+[tituloTabla]="'Esta es la tabla del componente padre'"
+>
+</app-tabla>
+
+<app-contador (incrementarValor)="recibirContador($event)"></app-contador>
+<section>
+    Este es el valor del contador en persona = {{contador}}
+</section>
+
+
+
+
+
+<!-- <section class="tablaP">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    @for (user of users; track $index) {
+    <tbody>
+      <tr>
+         <td>{{user.id}}  </td>
+         <td> {{user.name}}</td>
+      </tr>      
+    
+    </tbody>    
+    }
+  </table>
+
+</section>
+<hr/>
+
+</section>
+ -->

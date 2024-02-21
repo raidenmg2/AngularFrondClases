@@ -1,0 +1,17 @@
+section {
+  font-size: 18px;
+  color: gold;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+.conteIncrement {
+  padding: 10px;
+  margin: 1rem;
+  border-radius: 2em;
+  border: 2px black solid;
+  color: blue;
+  background-color: aquamarine;
+}

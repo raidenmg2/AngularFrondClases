@@ -1,0 +1,48 @@
+
+  
+    <table >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>tipoDocumento</th>
+                <th>numeroDocumento</th>
+                <th>nombre</th>
+                <th>direccion</th>
+                <th>telefono</th>
+                <th>email</th>
+                <th>estado</th>
+                <th>acciones</th>
+            </tr>           
+            
+        </thead>
+    <tbody>
+        @for (cliente of misClientes; track $index) {
+            <tr>
+                <td>{{cliente.id}} </td>
+                <td> {{cliente.tipoDocumento}}</td>
+                <td> {{cliente.numeroDocumento}}</td>
+                <td> {{cliente.nombre}}</td>
+                <td> {{cliente.direccion}}</td>
+                <td> {{cliente.telefono}}</td>
+                <td> {{cliente.email}}</td>
+                <td> {{cliente.estado}}</td>
+                 <td>
+                 <button type="button" class="btn btn-info">Editar</button>
+                 <button type="button" class="btn btn-primary">Actualizar</button>
+                 <button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente.id)" >Eliminar</button>
+                 </td>
+             
+                       
+              </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-success" (click)="showAgregarClientes()">Crear</button> 
+                 
+                 @if(mostrar){
+                    <app-agregar-clientes (agregarCliente)="recibirData($event)"></app-agregar-clientes> 
+                 }
+   
+                 
+    

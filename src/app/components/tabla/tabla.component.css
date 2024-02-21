@@ -1,0 +1,51 @@
+h1,h2 , h3, h4{
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+
+ }
+ table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+th, td{
+    /*Personalizar bordes de las celdas*/
+     border: solid 1px #00e ;
+     /*Personalizar espacio de izquierda a derecha de los elementos de las celdas*/
+     padding: 5px;
+    
+    }
+
+    th {
+        background-color: tomato;
+        color: white;
+        /*alinear texto a la izquierda */
+       text-align: center;
+       }
+
+    /*Hacer que cada dos filas el color de esta sea gris*/
+    tr:nth-child(even){
+    background-color: #eee;
+    }
+    tr:hover{
+        background-color: #aaa;
+        color: #00a;
+        }
+        
+    th:hover{
+           background-color: #aaa;
+           color: #00a;
+           /*hace que apareca una imagen de una mano al pasar el cursor por la cabecera*/
+          cursor: pointer;
+    }
+
+    tr:hover{
+        background-color: #aaa;
+        color: #00a;
+        /*hace que apareca una imagen de una mano al pasar el cursor por la cabecera*/
+       cursor: pointer;
+ }
+
+ 

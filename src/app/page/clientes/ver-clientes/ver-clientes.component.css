@@ -1,0 +1,48 @@
+* {
+  margin-top: 5rem;
+  padding: 0;
+}
+
+table {
+  /*Asignado ancho a la tabla para que ocupe toda la pagina*/
+  width: 100%;
+  /*Personalizar espacio entre bordes de las celdas*/
+}
+/*Personalizar cabecera th y celdas y elementos del cuperpo td*/
+th,
+td {
+  /*Personalizar bordes de las celdas*/
+  border: 1px #00e;
+  /*Personalizar espacio de izquierda a derecha de los elementos de las celdas*/
+  padding: 5px;
+  text-align: left;
+}
+/*Personalizar cabecera th */
+th {
+  background-color: rgb(74, 74, 248);
+  color: white;
+  /*alinear texto a la izquierda */
+  text-align: left;
+}
+/*Hacer que cada dos filas el color de esta sea gris*/
+tr:nth-child(even) {
+  background-color: #eee;
+}
+/* hacer que cada ves que paso el cursor por una fila cambie de color ya sea el texto y/o la fila*/
+tr:hover {
+  background-color: #aaa;
+  color: #00a;
+}
+/*hacer que cada ves que pasa el cursor por la cabecera cambie de color ya sea el texto y/o la fila */
+th:hover {
+  background-color: #aaa;
+  color: #00a;
+  /*hace que apareca una imagen de una mano al pasar el cursor por la cabecera*/
+  cursor: pointer;
+}
+button {
+  margin-left: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+}

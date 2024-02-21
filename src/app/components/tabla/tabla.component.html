@@ -1,0 +1,23 @@
+<h1>Tabla del componente hijo</h1>
+    <h4>{{tituloTabla}}</h4>
+    <table >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        @for (user of Usuarios; track $index) {
+        <tbody>
+          <tr>
+             <td>{{user.id}}  </td>
+             <td> {{user.name}}</td>
+          </tr>      
+        
+        </tbody>    
+        }
+      </table>
+<hr/>
+
+
+

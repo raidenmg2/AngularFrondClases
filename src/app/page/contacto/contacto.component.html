@@ -1,0 +1,36 @@
+<div class="content">
+<form [formGroup]="contactoForm"(submit)="enviarContacto()">
+    
+    <fieldset >
+        <legend> Formulario de datos personales</legend>
+        <label>Ingrese su nombre</label>
+        <br/>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre" formControlName="nombre" required >
+        <br/>
+        <br/>
+        <label>Ingrese la edad </label>
+        <br/>
+        <input type="number" placeholder="Ingrese su edad" id="edad"  formControlName="edad" required>
+        <br/>
+        <br/>       
+        <label> telefono de contacto</label>
+        <br/>
+        <input type="tel" placeholder="telefono de contacto" id="telefono" formControlName="telefono" required>
+        <br/>
+        <br/>     
+        <label> ingrese comentario</label>
+        <br/>
+        <textarea placeholder="Ingrese Comentario" formControlName="mensaje" rows="4" cols="50" required></textarea>
+        <br/>
+        <button type="submit" [disabled]="!contactoForm.valid">Enviar</button>
+    </fieldset>   
+ </form>
+ <section class="datos">
+    <h2>Datos formulario</h2>
+    <p>Nombre: {{contactoForm.value.nombre}}</p>
+    <p>Edad: {{contactoForm.value.edad}}</p>
+    <p>Telefono: {{contactoForm.value.telefono}}</p>
+    <p>Comentario: {{contactoForm.value.mensaje}}</p>
+ </section>
+
+</div>

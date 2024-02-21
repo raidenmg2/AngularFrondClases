@@ -1,0 +1,61 @@
+
+<div class="content">
+<div class="container mt-3 p-4 mb-5 ">
+
+    <form  [formGroup]="clienteForm" (submit)="crearCliente()">
+        <legend><h1><strong>Formulario para crear persona </strong></h1></legend>
+        <label for="id">Id:</label>
+        <input
+          type="text"
+          formControlName="id"
+          placeholder="Ingrese el Id del Cliente"
+        />
+        <label for="tipoDocumento">Tipo de Documento:</label>
+        <select id="tipoDocumento" formControlName="tipoDocumento">
+          <option value="#">------</option>
+          <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+          <option value="Cedula de extrangeria">Cedula de extranjeria</option>
+          <option value="pasaporte">pasaporte</option>
+          <option value="tarjeta de identidad">Tarjeta de identidad</option>
+          <option value="registro civil">Registro cvil</option>
+        </select>  
+        <label for="numeroDocumento">Numero de Documento:</label>
+        <input
+          type="text"
+          formControlName="numeroDocumento"
+          placeholder="Ingrese el Numero Documento"
+        />
+        
+        <label for="Nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" placeholder="Ingrese el nombre" />
+      
+        <label for="direccion">Dirección:</label>
+        <input
+          type="text"
+          formControlName="direccion"
+          placeholder="Ingrese la direccion"
+        />
+      <label for="telefono">Telefono:</label>
+        <input
+          type="text"
+          formControlName="telefono"
+          placeholder="Ingrese el telefono"
+        />
+      
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Ingrese el email del cliente"
+        />
+      
+        <label for="cbox2">Cliente activo </label>
+        <input type="checkbox" id="cbox2" value="second_checkbox" />
+
+        <button type="submit">Crear Cliente</button>
+      </form>
+
+</div>
+</div>
+
+<!-- metodo para limpiar el formulario es .reset-->
