@@ -32,8 +32,5 @@ li:hover {
 }
 
 .logo {
-  height: 4rem;
-  width: 4rem;
-  margin-left: 700px;
-  display: inline;
+  display: inline-block;
 }

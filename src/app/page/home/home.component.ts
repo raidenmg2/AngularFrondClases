@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { TablaComponent } from "../../components/tabla/tabla.component";
 import { PersonaComponent } from '../persona/persona.component';
 import Swal from 'sweetalert2';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { PermisosDirective } from '../../core/directives/permisos/permisos.directive';
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [TablaComponent, PersonaComponent]
+    imports: [RouterOutlet, RouterLink,TablaComponent, PersonaComponent, PermisosDirective]
 })
 export class HomeComponent implements OnInit {
     nombre: string ='';

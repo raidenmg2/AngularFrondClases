@@ -3,13 +3,32 @@
 <div class="container mt-3 p-4 mb-5 ">
 
     <form  [formGroup]="clienteForm" (submit)="crearCliente()">
-        <legend><h1><strong>Formulario para crear persona </strong></h1></legend>
-        <label for="id">Id:</label>
+        <legend><h1><strong>Formulario para crear Cliente </strong></h1></legend>
+       <label for="Nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" placeholder="Ingrese el nombre" />
+      
+        <label for="direccion">Dirección:</label>
         <input
           type="text"
-          formControlName="id"
-          placeholder="Ingrese el Id del Cliente"
+          formControlName="direccion"
+          placeholder="Ingrese la direccion"
         />
+      <label for="telefono">Telefono:</label>
+        <input
+          type="text"
+          formControlName="telefono"
+          placeholder="Ingrese el telefono"
+        />     
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Ingrese el email del cliente"
+        />
+      
+
+
         <label for="tipoDocumento">Tipo de Documento:</label>
         <select id="tipoDocumento" formControlName="tipoDocumento">
           <option value="#">------</option>
@@ -26,34 +45,24 @@
           placeholder="Ingrese el Numero Documento"
         />
         
-        <label for="Nombre">Nombre:</label>
-        <input type="text" formControlName="nombre" placeholder="Ingrese el nombre" />
-      
-        <label for="direccion">Dirección:</label>
-        <input
-          type="text"
-          formControlName="direccion"
-          placeholder="Ingrese la direccion"
-        />
-      <label for="telefono">Telefono:</label>
-        <input
-          type="text"
-          formControlName="telefono"
-          placeholder="Ingrese el telefono"
-        />
-      
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          formControlName="email"
-          placeholder="Ingrese el email del cliente"
-        />
-      
-        <label for="cbox2">Cliente activo </label>
-        <input type="checkbox" id="cbox2" value="second_checkbox" />
+       
+     
+        <!-- <label for="cbox2">Cliente activo </label>
+        <input type="checkbox" id="cbox2" value="second_checkbox" /> -->
 
-        <button type="submit">Crear Cliente</button>
+        <button  type="submit">Crear Cliente</button>
+
+        <button  type="button">
+        
+        <a routerLink="./../clientes">Cancelar</a>
+        
+        </button>
+
+ 
+
       </form>
+
+
 
 </div>
 </div>

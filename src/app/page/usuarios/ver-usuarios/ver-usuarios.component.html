@@ -1,0 +1,51 @@
+
+<ng-template class="container m-4 p-3" [appPermisos]="['ADMIN']">
+  
+    <div class="tabla">
+      <button class="btn btn-success" (click)="AgregarUsuario()">Crear Usuario</button>
+    </div>
+      <table >
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>nombre</th>
+                  <th>email</th>
+                  <th>tipoDocumento</th>
+                  <th>numeroDocumento</th>
+                  <th>Rol</th>
+                  <th>estado</th>
+                  <th>acciones</th>
+              </tr>           
+              
+          </thead>
+      <tbody>
+          @for (usuario of usuarios; track $index) {
+              <tr>
+                  <td>{{usuario._id}} </td>
+                  <td> {{usuario.nombre}}</td>
+                  <td> {{usuario.email}}</td>
+                  <td> {{usuario.tipoDocumento}}</td>
+                  <td> {{usuario.numeroDocumento}}</td>
+                  <td> 
+                    <select class="form-control" [(ngModel)]="usuario.rol" (change)="actualizarRol(usuario)">
+                    @for (rol of roles; track $index) {
+                        <option [value]="rol">{{rol}}</option>
+                    }
+
+                    </select>
+
+                  </td>
+                  <td> {{usuario.estado}}</td>
+                
+                   <td>
+                   <button type="button" class="btn btn-info" (click)="editarUsuarios(usuario._id)">Editar</button>
+                   <button type="button" class="btn btn-primary" (click)="actualizarUsuarios(usuario._id)">Actualizar</button>
+                   <button type="button" class="btn btn-danger" (click)="eliminarUsuario(usuario._id)" >Eliminar</button>
+                   </td>
+               
+                         
+                </tr>
+              }
+          </tbody>
+      </table>
+  </ng-template>

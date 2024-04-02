@@ -1,0 +1,70 @@
+<p>agregar-usuarios works!</p>
+<div class="content">
+  <div class="container mt-3 p-4 mb-5">
+    <form [formGroup]="usuarioForm" (submit)="crearUsuario()">
+      <legend>
+        <h1><strong>Formulario para crear usuarios</strong></h1>
+      </legend>
+      <label for="Nombre">Nombre:</label>
+      <input
+        type="text"
+        formControlName="nombre"
+        placeholder="Ingrese el nombre"
+      />
+
+      
+      <label for="tipoDocumento">Tipo de Documento:</label>
+      <select id="tipoDocumento" formControlName="tipoDocumento">
+        <option value="#">------</option>
+        <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+        <option value="Cedula de extrangeria">Cedula de extranjeria</option>
+        <option value="pasaporte">pasaporte</option>
+        <option value="tarjeta de identidad">Tarjeta de identidad</option>
+        <option value="registro civil">Registro cvil</option>
+      </select>
+      <label for="numeroDocumento">Numero de Documento:</label>
+      <input
+        type="text"
+        formControlName="numeroDocumento"
+        placeholder="Ingrese el Numero Documento"
+      />
+      
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Ingrese el email del cliente"
+      />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Ingrese password"
+      />
+
+      <label for="login">Login:</label>
+      <input
+        type="email"
+        formControlName="login"
+        placeholder="Ingrese el email del login"
+      />
+      
+      <label for="rol">Ingrese rol del usuario:</label>
+      <select id="rol" formControlName="rol"> 
+        <option value="#">------</option>
+        <option value="GERENTE">Gerente</option>
+        <option value="ADMIN">Administrador</option>
+        <option value="USUARIO">Usuario</option>
+        <option value="VENDEDOR">Vendedor</option>
+    </select>
+      <!-- <label for="cbox2">Cliente activo </label>
+            <input type="checkbox" id="cbox2" value="second_checkbox" /> -->
+
+      <button type="submit">Crear Usuario</button>
+
+      <button type="button" class="btn-danger">
+        <a routerLink="./../clientes">Cancelar</a>
+      </button>
+    </form>
+  </div>
+</div>

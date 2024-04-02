@@ -1,6 +1,6 @@
 export interface Clientes {
 /** se definien las propiedades del objeto en este caso la interface */
-    id: number;
+    _id: number;
     nombre: string;
     direccion: string;
     telefono: number;

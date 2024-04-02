@@ -1,5 +1,9 @@
 
+  <ng-template class="container m-4 p-3" [appPermisos]="['ADMIN']">
   
+  <div>
+    <button class="btn btn-success" (click)="AgregarCliente()">Crear clientes</button>
+  </div>
     <table >
         <thead>
             <tr>
@@ -18,7 +22,7 @@
     <tbody>
         @for (cliente of misClientes; track $index) {
             <tr>
-                <td>{{cliente.id}} </td>
+                <td>{{cliente._id}} </td>
                 <td> {{cliente.tipoDocumento}}</td>
                 <td> {{cliente.numeroDocumento}}</td>
                 <td> {{cliente.nombre}}</td>
@@ -29,7 +33,7 @@
                  <td>
                  <button type="button" class="btn btn-info">Editar</button>
                  <button type="button" class="btn btn-primary">Actualizar</button>
-                 <button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente.id)" >Eliminar</button>
+                 <button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente._id)" >Eliminar</button>
                  </td>
              
                        
@@ -37,12 +41,12 @@
             }
         </tbody>
     </table>
-
-    <button type="button" class="btn btn-success" (click)="showAgregarClientes()">Crear</button> 
+</ng-template>
+    <!-- <button type="button" class="btn btn-success" (click)="showAgregarClientes()">Crear</button> 
                  
                  @if(mostrar){
                     <app-agregar-clientes (agregarCliente)="recibirData($event)"></app-agregar-clientes> 
                  }
    
-                 
+                  -->
     
